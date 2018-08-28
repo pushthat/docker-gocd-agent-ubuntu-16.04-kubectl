@@ -66,6 +66,8 @@ RUN \
   curl -sSL https://get.docker.com/ | sh && \
   usermod -aG docker go && \
   apt install gettext -y && \
+  curl -LO curl -LO https://gist.githubusercontent.com/pushthat/787c26f3645f33c230847840f1369aef/raw/5e72c61885fe276a0b74ac3adc45ea477a38282a/build-and-push.sh && \
+  mv build-and-push.sh /bin && \
   mkdir -p /docker-entrypoint.sh
 
 # ensure that logs are printed to console output
